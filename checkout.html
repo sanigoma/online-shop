@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | Caphaus</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: white;
+      color: black;
+      min-height: 100vh;
+    }
+
+    /* ---------- NAVBAR ---------- */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 5%;
+      border-bottom: 1px solid #ddd;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      color: black;
+      font-weight: bold;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      align-items: center;
+    }
+
+    nav ul li {
+      cursor: pointer;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: red;
+    }
+
+    .malam {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .malam:hover {
+      background-color: red;
+    }
+
+    /* ---------- MAIN ---------- */
+    main {
+      max-width: 1100px;
+      margin: 50px auto;
+      padding: 20px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .order-summary, .checkout-form {
+      background-color: #f9f9f9;
+      border-radius: 10px;
+      padding: 25px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      flex: 1 1 450px;
+    }
+
+    h2 {
+      color: black;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      border-left: 4px solid red;
+      padding-left: 10px;
+    }
+
+    .order-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #ddd;
+      padding: 10px 0;
+    }
+
+    .order-item img {
+      width: 60px;
+      height: 60px;
+      border-radius: 8px;
+    }
+
+    .total {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      color: red;
+    }
+
+    /* ---------- FORM ---------- */
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input, select, textarea {
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: red;
+      box-shadow: 0 0 5px rgba(255,0,0,0.3);
+    }
+
+    .submit-btn {
+      background-color: black;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .submit-btn:hover {
+      background-color: red;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        flex-direction: column;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------- NAVIGATION ---------- -->
+  <nav>
+    <h1>Caphaus</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="custom.html">Custom Wear</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><i class="fa fa-heart" aria-hidden="true"></i></li>
+      <li><i class="fa fa-shopping-cart" aria-hidden="true"></i></li>
+      <li><a href="checkout.html"><button class="malam">Buy Now</button></a></li>
+    </ul>
+  </nav>
+
+  <!-- ---------- MAIN CONTENT ---------- -->
+  <main>
+    <!-- ORDER SUMMARY -->
+    <div class="order-summary">
+      <h2>Your Order</h2>
+      <div class="order-item">
+        <img src="https://images.unsplash.com/photo-1606813903172-8f1c8f40a5d6?w=200" alt="Cap">
+        <div>
+          <p><strong>Red Streetwear Cap</strong></p>
+          <p>₦8,000 x 1</p>
+        </div>
+        <p><strong>₦8,000</strong></p>
+      </div>
+
+      <div class="order-item">
+        <img src="https://images.unsplash.com/photo-1618354691579-85c46b48a29b?w=200" alt="Cap">
+        <div>
+          <p><strong>Black Embroidery Cap</strong></p>
+          <p>₦9,000 x 1</p>
+        </div>
+        <p><strong>₦9,000</strong></p>
+      </div>
+
+      <div class="total">
+        <span>Total:</span>
+        <span>₦17,000</span>
+      </div>
+    </div>
+
+    <!-- CHECKOUT FORM -->
+    <div class="checkout-form">
+      <h2>Checkout Details</h2>
+      <form>
+        <input type="text" placeholder="Full Name" required>
+        <input type="email" placeholder="Email Address" required>
+        <input type="text" placeholder="Phone Number" required>
+        <input type="text" placeholder="Delivery Address" required>
+
+        <label for="payment">Payment Method</label>
+        <select id="payment" required>
+          <option value="">Select payment method</option>
+          <option>Card Payment</option>
+          <option>Bank Transfer</option>
+          <option>Pay on Delivery</option>
+        </select>
+
+        <button type="submit" class="submit-btn">Complete Purchase</button>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caphaus | Contact</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: white;
+      color: black;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 50px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: red;
+    }
+
+    .malam {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .malam:hover {
+      background-color: red;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* CONTACT HEADER */
+    .contact-header {
+      text-align: center;
+      padding: 70px 20px 30px;
+    }
+
+    .contact-header h1 {
+      font-size: 2.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .contact-header p {
+      color: #555;
+      font-size: 1.1rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* CONTACT SECTION */
+    .contact-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      padding: 50px 80px;
+      gap: 40px;
+    }
+
+    .contact-info {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-info h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+    }
+
+    .contact-info p {
+      margin-bottom: 15px;
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .contact-info i {
+      color: red;
+      margin-right: 10px;
+    }
+
+    .contact-form {
+      flex: 1;
+      min-width: 300px;
+      background: #f9f9f9;
+      padding: 30px 40px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .contact-form h2 {
+      margin-bottom: 20px;
+      font-size: 1.8rem;
+      text-align: center;
+    }
+
+    .contact-form label {
+      font-weight: bold;
+      display: block;
+      margin: 15px 0 8px;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
+    }
+
+    .contact-form textarea {
+      resize: none;
+      height: 100px;
+    }
+
+    .contact-form button {
+      margin-top: 20px;
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      cursor: pointer;
+      width: 100%;
+      font-weight: bold;
+      transition: all 0.3s ease;
+    }
+
+    .contact-form button:hover {
+      background-color: red;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav {
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        width: 70%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .contact-section {
+        flex-direction: column;
+        padding: 30px 20px;
+      }
+
+      .contact-form {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1>Caphaus</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="custom.html">Custom Wear</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" style="color: red;">Contact</a></li>
+      <li><i class="fa fa-search"></i></li>
+      <li><i class="fa fa-heart"></i></li>
+      <li><i class="fa fa-shopping-cart"></i></li>
+      <li><button class="malam">Buy now</button></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></div>
+  </nav>
+
+  <section class="contact-header">
+    <h1>Contact Us</h1>
+    <p>
+      Got a question, idea, or collaboration? We’d love to hear from you! 
+      Reach out to the Caphaus team — we’ll get back to you within 24 hours.
+    </p>
+  </section>
+
+  <section class="contact-section">
+    <div class="contact-info">
+      <h2>Get in Touch</h2>
+      <p><i class="fa fa-map-marker-alt"></i> 10 Maiyadi plaza, Malam Madori, Jigawa, Nigeria</p>
+      <p><i class="fa fa-envelope"></i> support@caphauswears.com</p>
+      <p><i class="fa fa-phone"></i> +234 912 146 5850</p>
+      <p><i class="fa fa-clock"></i> Mon – Sat: 9am – 6pm</p>
+    </div>
+
+    <form class="contact-form">
+      <h2>Send a Message</h2>
+
+      <label for="name">Full Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>

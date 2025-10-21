@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caphaus | About Us</title>
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      background-color: white;
+      color: black;
+      overflow-x: hidden;
+    }
+
+    /* NAVBAR */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: white;
+      padding: 20px 50px;
+      border-bottom: 1px solid #eee;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav h1 {
+      font-size: 1.8rem;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: black;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: red;
+    }
+
+    .malam {
+      background-color: black;
+      color: white;
+      border: none;
+      padding: 8px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .malam:hover {
+      background-color: red;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* ABOUT HEADER */
+    .about-header {
+      text-align: center;
+      padding: 80px 20px 40px;
+    }
+
+    .about-header h1 {
+      font-size: 2.8rem;
+      font-weight: bold;
+    }
+
+    .about-header p {
+      margin-top: 10px;
+      color: #444;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* STORY SECTION */
+    .story {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 60px 80px;
+      gap: 40px;
+    }
+
+    .story img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    }
+
+    .story-content {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .story-content h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: red;
+    }
+
+    .story-content p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #555;
+    }
+
+    .story-image {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    /* MISSION SECTION */
+    .mission {
+      background-color: black;
+      color: white;
+      text-align: center;
+      padding: 80px 20px;
+    }
+
+    .mission h2 {
+      color: red;
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+    }
+
+    .mission p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #ddd;
+    }
+
+    /* TEAM SECTION */
+    .team {
+      padding: 70px 80px;
+      text-align: center;
+    }
+
+    .team h2 {
+      font-size: 2rem;
+      color: red;
+      margin-bottom: 40px;
+    }
+
+    .team-members {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .member {
+      background-color: #f9f9f9;
+      border-radius: 15px;
+      padding: 20px;
+      width: 250px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .member img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .member h3 {
+      margin-top: 10px;
+      font-size: 1.2rem;
+    }
+
+    .member p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      nav {
+        padding: 15px 20px;
+      }
+
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: white;
+        width: 70%;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .story {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .mission {
+        padding: 50px 20px;
+      }
+
+      .team {
+        padding: 50px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <h1>Caphaus</h1>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="custom.html">Custom Wear</a></li>
+      <li><a href="about.html" style="color: red;">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><i class="fa fa-search"></i></li>
+      <li><i class="fa fa-heart"></i></li>
+      <li><i class="fa fa-shopping-cart"></i></li>
+      <li><button class="malam">Buy now</button></li>
+    </ul>
+    <div class="menu-toggle" id="menu-toggle"><i class="fa fa-bars"></i></div>
+  </nav>
+
+  <section class="about-header">
+    <h1>About Caphaus</h1>
+    <p>Founded in 2016, Caphaus brings creativity and self-expression to the streets through unique, high-quality custom streetwear caps.</p>
+  </section>
+
+  <section class="story">
+    <div class="story-content">
+      <h2>Our Story</h2>
+      <p>
+        What began as a passion for individuality has grown into a bold streetwear brand recognized for redefining modern cap design. 
+        At Caphaus, we believe that what you wear should reflect who you are — authentic, confident, and original.
+      </p>
+      <br>
+      <p>
+        Every piece is crafted with attention to detail, comfort, and quality, blending urban culture with personal expression. 
+        From custom orders to exclusive drops, we exist for those who dare to stand out.
+      </p>
+    </div>
+    <div class="story-image">
+      <img src="images/urban identity.webp" alt="Caphaus Story">
+    </div>
+  </section>
+
+  <section class="mission">
+    <h2>Our Mission</h2>
+    <p>
+      To empower self-expression through bold, high-quality streetwear that speaks your identity.  
+      We’re not just selling caps — we’re building confidence, culture, and community.
+    </p>
+  </section>
+
+  <section class="team">
+    <h2>Meet the Team</h2>
+    <div class="team-members">
+      <div class="member">
+        <img src="IMG_E0337.JPG" alt="Team member">
+        <h3>SANI HARUNA</h3>
+        <p>Founder & Creative Director</p>
+      </div>
+      <div class="member">
+        <img src="7831670fa5544378ad793292ba6bb50a.jpg" alt="Team member">
+        <h3>ANAS HARUNA</h3>
+        <p>Head of Design</p>
+      </div>
+      <div class="member">
+        <img src="bf14f48465964a45bbdeee0a95fe789d.jpg" alt="Team member">
+        <h3>HARUNA SANI TAHIR</h3>
+        <p>Brand Manager</p>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    toggle.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
+    });
+  </script>
+</body>
+</html>
